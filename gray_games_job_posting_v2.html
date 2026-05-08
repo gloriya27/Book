@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0a0a0f; color: #e8e4d9; font-family: 'DM Sans', sans-serif; }
+  .page { max-width: 720px; margin: 0 auto; padding: 32px 32px 36px; }
+
+  .header-bar {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 28px; border-bottom: 1px solid #1e1e2e; padding-bottom: 18px;
+  }
+  .logo { font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #c8ff00; }
+  .logo span { color: #333; }
+  .badges { display: flex; gap: 8px; }
+  .badge { font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.1em; padding: 4px 10px; border-radius: 2px; text-transform: uppercase; }
+  .badge-remote { background: #1a1a2e; color: #7c6fcd; border: 1px solid #2a2a4e; }
+  .badge-gig { background: #0f1f0f; color: #4ade80; border: 1px solid #1a3a1a; }
+
+  .eyebrow { font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: #555; margin-bottom: 8px; }
+  h1 { font-size: 28px; font-weight: 600; line-height: 1.2; color: #f0ece0; letter-spacing: -0.02em; margin-bottom: 2px; }
+  h1 .highlight { color: #c8ff00; }
+  .subtitle { font-size: 12px; color: #444; font-family: 'Space Mono', monospace; margin-bottom: 20px; margin-top: 4px; }
+
+  .intro-block {
+    background: #0f0f1a; border: 1px solid #1e1e2e; border-left: 3px solid #c8ff00;
+    padding: 14px 18px; margin-bottom: 24px; border-radius: 0 4px 4px 0;
+  }
+  .intro-block p { font-size: 13px; line-height: 1.65; color: #888; }
+  .intro-block p em { color: #e8e4d9; font-style: normal; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+  .section { margin-bottom: 0; }
+  .section-label {
+    font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.3em;
+    text-transform: uppercase; color: #c8ff00; margin-bottom: 10px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .section-label::after { content: ''; flex: 1; height: 1px; background: #1e1e2e; }
+
+  .task-grid { display: grid; gap: 8px; }
+  .task-card {
+    background: #0d0d18; border: 1px solid #1a1a2a; border-radius: 4px;
+    padding: 12px 14px; display: flex; gap: 12px; align-items: flex-start;
+  }
+  .task-icon {
+    font-family: 'Space Mono', monospace; font-size: 9px; color: #c8ff00;
+    background: #1a1f0a; border: 1px solid #2a3a0a; padding: 3px 5px;
+    border-radius: 2px; letter-spacing: 0.05em; flex-shrink: 0; margin-top: 1px;
+  }
+  .task-content strong { display: block; font-size: 13px; font-weight: 500; color: #e8e4d9; margin-bottom: 3px; }
+  .task-content p { font-size: 12px; line-height: 1.55; color: #5a5a6a; }
+
+  .req-list { display: grid; gap: 8px; }
+  .req-item {
+    display: flex; align-items: flex-start; gap: 10px;
+    padding: 10px 14px; background: #0d0d18; border: 1px solid #1a1a2a; border-radius: 4px;
+  }
+  .req-dot { width: 5px; height: 5px; border-radius: 50%; background: #c8ff00; flex-shrink: 0; margin-top: 6px; }
+  .req-item p { font-size: 12px; line-height: 1.55; color: #5a5a6a; }
+  .req-item p strong { color: #e8e4d9; font-weight: 500; }
+
+  .footer-line {
+    margin-top: 24px; border-top: 1px solid #1a1a2a; padding-top: 14px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .footer-line span { font-family: 'Space Mono', monospace; font-size: 10px; color: #2a2a2a; letter-spacing: 0.1em; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header-bar">
+    <div class="logo">Gray<span>.</span>Games <span style="color:#2a2a2a">// Gamedev Studio</span></div>
+    <div class="badges">
+      <span class="badge badge-remote">Kyiv / Remote</span>
+      <span class="badge badge-gig">Гіг-контракт</span>
+    </div>
+  </div>
+
+  <div class="eyebrow">Відкрита позиція</div>
+  <h1>Адміністратор <span class="highlight">документообігу</span> та IP-процесів <span style="color:#333;font-size:20px">/ Діловод</span></h1>
+  <div class="subtitle">// Gray Games · Kyiv, Ukraine · Diya.City</div>
+
+  <div class="intro-block">
+    <p>Ми шукаємо системну та відповідальну людину, яка візьме на себе <em>повний контроль за «цифровим серцем» нашої студії</em>. Ваша роль — забезпечити юридичну чистоту кожного байту коду та кожного пікселя арту, які створює наша команда.</p>
+  </div>
+
+  <div class="two-col">
+    <div class="section">
+      <div class="section-label">Основні завдання</div>
+      <div class="task-grid">
+        <div class="task-card">
+          <span class="task-icon">IP</span>
+          <div class="task-content">
+            <strong>Управління інтелектуальною власністю</strong>
+            <p>Супроводження передачі прав від розробників до компанії. Контроль підписання актів за кожним мілстоуном.</p>
+          </div>
+        </div>
+        <div class="task-card">
+          <span class="task-icon">NDA</span>
+          <div class="task-content">
+            <strong>Захист комерційної таємниці</strong>
+            <p>Впровадження Положення про КТ. Робота з договорами NDA та NCA з командою та зовнішніми партнерами.</p>
+          </div>
+        </div>
+        <div class="task-card">
+          <span class="task-icon">ЕДО</span>
+          <div class="task-content">
+            <strong>Адміністрування ЕДО</strong>
+            <p>Робота в WhiteDoc / Odoo. Від завантаження шаблонів до контролю наявності КЕП у кожного учасника.</p>
+          </div>
+        </div>
+        <div class="task-card">
+          <span class="task-icon">PUB</span>
+          <div class="task-content">
+            <strong>Взаємодія з паблішерами</strong>
+            <p>Підготовка документів для Voodoo, SayGames, Ketchapp тощо. Перевірка реквізитів та контроль термінів.</p>
+          </div>
+        </div>
+        <div class="task-card">
+          <span class="task-icon">ДІЯ</span>
+          <div class="task-content">
+            <strong>Супровід Дія.City</strong>
+            <p>Підготовка документації для підтримання статусу резидента та бронювання ключових співробітників.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Наші очікування</div>
+      <div class="req-list">
+        <div class="req-item">
+          <div class="req-dot"></div>
+          <p><strong>Досвід в IT або Gamedev</strong> — розуміння специфіки: асети, білди, репозиторії та як права переходять до студії.</p>
+        </div>
+        <div class="req-item">
+          <div class="req-dot"></div>
+          <p><strong>Експертність в ЕДО</strong> — впевнене володіння КЕП та системами електронного документообороту.</p>
+        </div>
+        <div class="req-item">
+          <div class="req-dot"></div>
+          <p><strong>Системність та уважність</strong> — здатність вести реєстри так, щоб будь-який документ можна було швидко знайти.</p>
+        </div>
+        <div class="req-item">
+          <div class="req-dot"></div>
+          <p><strong>Юридична грамотність</strong> — базове розуміння гіг-контрактів та авторського права.</p>
+        </div>
+        <div class="req-item">
+          <div class="req-dot"></div>
+          <p><strong>Англійська мова</strong> — базова переписка з юридичними департаментами іноземних паблішерів.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-line">
+    <span>Gray Games · Gamedev Studio</span>
+    <span style="color:#1e1e2e">▓▒░</span>
+    <span>Kyiv, Ukraine · Diya.City Resident</span>
+  </div>
+
+</div>
+</body>
+</html>
